@@ -1,12 +1,12 @@
 import React from 'react'
 import { Header } from './_components/Header'
-import { Waklist } from './_components/Waklist'
+import WorkspaceList from './_components/WorkspaceList'
 
 const page = () => {
   return (
     <div>
 <Header/>
-<Waklist/>
+<WorkspaceList/>
     </div>
   )
 }
