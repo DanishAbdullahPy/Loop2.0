@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import CoverPicker from "@/app/_components/CoverPicker";
-import EmojiPickerComponent from "@/app/_components/EmojiPickerComponent";
-import { db } from "@/config/firebaseconfig";
+import CoverPicker from "../../../../app/_components/Coverpicker";
+import EmojiPickerComponent from "../../../../app/_components/EmojipickerComponent";
+import { db } from "../../../../config/firebaseconfig";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { SmilePlus } from "lucide-react";
 import Image from "next/image";
@@ -73,8 +73,8 @@ function DocumentInfo({ params }) {
           updateDocumentInfo("coverImage", cover);
         }}
       >
-        <div className="relative group cursor-pointer">
-          <h2 className="hidden absolute p-4 w-full h-full items-center group-hover:flex justify-center">
+        <div className="relative cursor-pointer group">
+          <h2 className="absolute items-center justify-center hidden w-full h-full p-4 group-hover:flex">
             Change Cover
           </h2>
           <div className="group-hover:opacity-40">
@@ -100,18 +100,18 @@ function DocumentInfo({ params }) {
             {emoji ? (
               <span className="text-5xl">{emoji}</span>
             ) : (
-              <SmilePlus className="h-10 w-10 text-gray-500" />
+              <SmilePlus className="w-10 h-10 text-gray-500" />
             )}
           </div>
         </EmojiPickerComponent>
       </div>
 
-      <div className="mt-10 px-20 ml-10 p-10">
+      <div className="p-10 px-20 mt-10 ml-10">
         <input
           type="text"
           placeholder="Untitled Document"
           defaultValue={documentInfo?.documentName}
-          className="font-bold text-4xl outline-none"
+          className="text-4xl font-bold outline-none"
           onBlur={(event) =>
             updateDocumentInfo("documentName", event.target.value)
           }

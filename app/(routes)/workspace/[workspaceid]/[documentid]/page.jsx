@@ -1,7 +1,9 @@
+"use Client"
+
 import React from "react";
 import SideNav from "../../_component/SideNav";
 import DocumentEditorSection from "../../_component/DocumentEditorSection";
-import { Room } from "@/app/Room";
+import { Room } from "../../../../../app/Room";
 
 function page({ params }) {
   return (

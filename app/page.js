@@ -1,10 +1,13 @@
-import React from 'react'
+import { Button } from "../components/ui/button";
+import Image from "next/image";
+import Hero from "./_components/Hero";
+import Header from "./_components/Header";
 
-function page() {
+export default function Home() {
   return (
-    <div>hi there 
+    <div>
+      <Header/>
+     <Hero/>
     </div>
-  )
+  );
 }
-
-export default page

@@ -1,7 +1,9 @@
+// Example `jsconfig.json` for Next.js
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/config/*": ["config/*"]
     }
   }
 }

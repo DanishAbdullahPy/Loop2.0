@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.0.42",
     "@clerk/nextjs": "^5.3.7",
     "@editorjs/checklist": "^1.6.0",
     "@editorjs/code": "^2.9.0",
@@ -20,7 +21,9 @@
     "@editorjs/nested-list": "^1.4.3",
     "@editorjs/paragraph": "^2.11.6",
     "@editorjs/table": "^2.4.1",
+    "@google/generative-ai": "^0.19.0",
     "@liveblocks/client": "^2.7.2",
+    "@liveblocks/node": "^2.7.2",
     "@liveblocks/react": "^2.7.2",
     "@liveblocks/react-ui": "^2.7.2",
     "@radix-ui/react-dialog": "^1.1.1",

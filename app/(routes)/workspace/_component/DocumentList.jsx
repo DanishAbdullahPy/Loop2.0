@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import DocumentOptions from "./DocumentOptions";
 import { deleteDoc, doc } from "firebase/firestore";
-import { db } from '@/config/firebaseconfig';
-import { toast } from 'sonner';
+import { db } from "../../../../config/firebaseconfig";
+import { toast } from "sonner";
 
 function DocumentList({ documentList, params }) {
   const router = useRouter();
@@ -34,7 +34,7 @@ function DocumentList({ documentList, params }) {
             ${docItem?.id === params?.documentid ? "bg-white" : ""}
           `}
         >
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             {!docItem.emoji && (
               <Image
                 src="/loopdocument.svg"
@@ -47,10 +47,7 @@ function DocumentList({ documentList, params }) {
               {docItem?.emoji} {docItem.documentName}
             </h2>
           </div>
-          <DocumentOptions
-            doc={docItem}
-            deleteDocument={deleteDocument}
-          />
+          <DocumentOptions doc={docItem} deleteDocument={deleteDocument} />
         </div>
       ))}
     </div>

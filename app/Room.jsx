@@ -1,13 +1,13 @@
 "use client";
 
-import { ReactNode } from "react";
+import React from "react";
 import {
   LiveblocksProvider,
   RoomProvider,
   ClientSideSuspense,
 } from "@liveblocks/react/suspense";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "@/config/firebaseconfig";
+import { db } from "../config/firebaseconfig";
 
 export function Room({ children,params }) {
   return (
