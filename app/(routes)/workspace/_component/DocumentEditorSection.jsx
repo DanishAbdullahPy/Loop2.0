@@ -1,9 +1,16 @@
-import React from "react";
+"use client"; 
+
+import React, { useState } from "react"; // 2. Importing useState
 import DocumentHeader from "./DocumentHeader";
 import DocumentInfo from "./DocumentInfo";
 import RichDocumentEditor from "./RichDocumentEditor";
+import { Button } from "@/components/ui/button";
+import { MessageCircle, X } from "lucide-react"; // 3. Importing X
+import CommentBox from "./CommentBox";
 
-function DocumentEditorSection({params}) {
+function DocumentEditorSection({ params }) {
+  const [openComment, setOpenComment] = useState(false);
+
   return (
     <div>
       <div>
@@ -11,11 +18,17 @@ function DocumentEditorSection({params}) {
       </div>
 
       <div>
-        <DocumentInfo params={params}/>
+        <DocumentInfo params={params} />
       </div>
 
       <div>
-        <RichDocumentEditor params={params}/>
+        <RichDocumentEditor params={params} />
+        <div className='fixed right-10 bottom-10'>
+          <Button onClick={() => setOpenComment(!openComment)}>
+            {openComment ? <X /> : <MessageCircle />} {/* Using imported X */}
+          </Button>
+          {openComment && <CommentBox />}
+        </div>
       </div>
     </div>
   );

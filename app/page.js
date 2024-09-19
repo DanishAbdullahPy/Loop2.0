@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
+function page() {
   return (
-   <div>
-    <h1>hi there </h1>
-    <Button> hi there click me</Button>
-    
-   </div>
-  );
+    <div>hi there 
+    </div>
+  )
 }
+
+export default page
